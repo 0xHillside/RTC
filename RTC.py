@@ -4,6 +4,7 @@ import subprocess
 import argparse
 import base64
 import re
+import shutil
 
 # Initialize parser
 parser = argparse.ArgumentParser()
@@ -15,6 +16,21 @@ parser.add_argument("-r", "--read", help="The base64 text itself containing the 
 # Read arguments from command line
 args = parser.parse_args()
 
+tcs = [ "impacket-ticketConverter", "ticketConverter.py", "ticketConverter" ]
+tc = ""
+for t in tcs:
+    if shutil.which(t):
+        print(f"[+] using {t}")
+        tc = t
+        break
+
+if ( not tc ): 
+    print( "[-] ticketConverter not found" )
+    exit(1)
+
+if ( not args.file ) and ( not args.read ):
+    args.read = input()
+
 # Handle file argument
 if args.file:
     print(f"[+] text file provided: {args.file}")
@@ -25,7 +41,7 @@ if args.file:
     with open(f'{cut_name}.kirbii', "wb") as f:
         f.write(decoded_file)
     print(f"[+] kirbii file saved: {cut_name}.kirbii")
-    os.system(f'impacket-ticketConverter {cut_name}.kirbii "{cut_name}.ccache"')
+    os.system(f'{tc} {cut_name}.kirbii "{cut_name}.ccache"')
     print(f"[+] ccache file saved: {cut_name}.cacche")
 
 
@@ -35,5 +51,5 @@ if args.read:
     with open(f'ticket.kirbii', "wb") as f:
         f.write(decoded_read)
     print(f"[+] text file saved: ticket.kirbii")
-    os.system(f'impacket-ticketConverter ticket.kirbii "ticket.ccache"')
+    os.system(f'{tc} ticket.kirbii "ticket.ccache"')
     print(f"[+] cacche saved: ticket.cacche")

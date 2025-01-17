@@ -56,3 +56,34 @@ Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies
 [+] done
 [+] cacche saved: ticket.cacche
 ```
+
+## from input (1)
+
+```
+echo "doIFrjCCBaqg...FVQUEVULlZM" | ./RTC.py 
+[+] using ticketConverter.py
+[+] text provided: doIFrjCCBaqg...FVQUEVULlZM
+[+] text file saved: ticket.kirbii
+Impacket v0.13.0.dev0+20241220.182433.9c8e4083 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] converting kirbi to ccache...
+[+] done
+[+] cacche saved: ticket.cacche
+
+```
+
+## from input (2)
+
+```
+└─$ ./RTC.py
+[+] using ticketConverter.py
+doIFrjCCBaqg...FVQUEVULlZM
+
+[+] text provided: doIFrjCCBaqg...FVQUEVULlZM
+[+] text file saved: ticket.kirbii
+Impacket v0.13.0.dev0+20241220.182433.9c8e4083 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] converting kirbi to ccache...
+[+] done
+[+] cacche saved: ticket.cacche
+```
