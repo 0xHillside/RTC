@@ -57,7 +57,7 @@ Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies
 [+] cacche saved: ticket.cacche
 ```
 
-## from input (1)
+## from input | piped into the script
 
 ```
 echo "doIFrjCCBaqg...FVQUEVULlZM" | ./RTC.py 
@@ -72,7 +72,7 @@ Impacket v0.13.0.dev0+20241220.182433.9c8e4083 - Copyright Fortra, LLC and its a
 
 ```
 
-## from input (2)
+## from input | pasted into console from clipboard
 
 ```
 └─$ ./RTC.py
