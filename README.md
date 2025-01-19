@@ -87,3 +87,7 @@ Impacket v0.13.0.dev0+20241220.182433.9c8e4083 - Copyright Fortra, LLC and its a
 [+] done
 [+] cacche saved: ticket.cacche
 ```
+
+## Work In progress / To Be Done
+- add TicketConverter.py conversion into the code
+- add DescribeTicket to auto name the tickets
