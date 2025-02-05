@@ -10,7 +10,7 @@ script uses calls for impacket-ticketConverter, so if you have it under the name
 # Installation & Dependencies
 
 ```
-git clone https://github.com/0xHillside/RT2C
+git clone https://github.com/0xHillside/TTC
 ```
 
 Dependencies to install
