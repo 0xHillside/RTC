@@ -1,4 +1,4 @@
-# RTC, short for Rubeus To Cache
+# TTC, short for Ticket To Cache
 Rubeus To Cacche is a python tool to decode base64-encoded Kerberos tickets and convert them into .ccache files
 
 A tool that makes interoperability between linux and windows systems easier, I made this tool so I wouldnt waste 5 more seconds when doing a box or anything of the sort
